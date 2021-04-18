@@ -1,7 +1,6 @@
 const  express =  require('express');
 const mongoose = require('mongoose');
 
-
 require('dotenv').config()
 
 const app = express();
@@ -26,10 +25,10 @@ app.use('/', laboratoryRoute);
 app.use('/', examRoute);
 
 
-const swaggerUi = require('swagger-ui-express');
-const swaggerDocument = require('../swagger_output.json');
+// const swaggerUi = require('swagger-ui-express');
+// const swaggerDocument = require('../swagger_output.json');
 
-app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+// app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 
 module.exports =  app ;
