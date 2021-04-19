@@ -31,7 +31,7 @@
 ---
 
 #### Documentação uso API 
-+ __[Postam Docs](https://documenter.getpostman.com/view/10185972/TzJsfdQ4#cdf6b490-82a5-4752-92a9-52b552f086e3)__
++ __[Postam Docs](https://documenter.getpostman.com/view/10185972/TzJsfdQ4)__
 + __[Heroku](https://exames-laboratorio-api.herokuapp.com/)__
 
 ---
