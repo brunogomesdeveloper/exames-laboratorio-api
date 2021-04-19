@@ -53,11 +53,11 @@ exports.update = async(req, res, next) => {
         let data = req.body;
         let array ;
 
-        if(!Array.isArray(data.laboratorys)){
+        if(!Array.isArray(data.Exams)){
             array = [data]
         }
         else {
-            array = data.laboratorys
+            array = data.Exams
         }
 
         array.forEach(element => {
@@ -74,6 +74,7 @@ exports.update = async(req, res, next) => {
         await repository.update(array);
         res.status(200).send({ message : "sucess - ok" });
     } catch (e) {
+        console.log(e)
         res.status(500).send({
             message: 'Falha ao processar sua requisição'
         });

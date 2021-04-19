@@ -11,14 +11,15 @@ exports.search = async() => {
     return res;
 }
 
-exports.update = async(data) => {
-
+exports.update = async(param) => {
     param.forEach(element => {
         Exam.findByIdAndUpdate(element._id, {
             $set: {
-                name : data.name,
-                tipo : data.tipo
+                name : element.name,
+                tipo : element.tipo
             }
+        }, (err, res) => {
+            console.log(err, res)
         });       
     });
 
