@@ -17,18 +17,18 @@ mongoose.set('useCreateIndex', true);
 const Laboratory = require('./model/laboratoryModel');
 const Exam = require('./model/examModel');
 
-const  laboratoryRoute = require('./routes/LaboratoryRoute')
-const  examRoute = require('./routes/ExamRoute')
+const  laboratoryRoute = require('./routes/laboratoryRoute')
+const  examRoute = require('./routes/examRoute')
 
 
 app.use('/', laboratoryRoute);
 app.use('/', examRoute);
 
 
-// const swaggerUi = require('swagger-ui-express');
-// const swaggerDocument = require('../swagger_output.json');
+const swaggerUi = require('swagger-ui-express');
+const swaggerDocument = require('../swagger_output.json');
 
-// app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 
 module.exports =  app ;

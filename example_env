@@ -1,0 +1,6 @@
+PORT=3333
+
+
+CONNECTIONSTRING=mongodb+srv://root:root@123@cluster0.uk5lx.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
+
+

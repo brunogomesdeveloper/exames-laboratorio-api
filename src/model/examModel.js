@@ -16,7 +16,8 @@ const schema = new Schema({
     tipo : {
         type: String,
         enum : ['analise clinica', 'imagem'],
-        default: 'analise clinica'
+        default: 'analise clinica',
+        required: true,
     },
   
 });

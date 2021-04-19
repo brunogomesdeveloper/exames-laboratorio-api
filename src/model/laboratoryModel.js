@@ -14,13 +14,13 @@ const schema = new Schema({
     trim: true,
   },
   address: {
-    country: { type: String },
-    state: { type: String },
-    city: { type: String },
-    neighboorhod: { type: String },
-    street: { type: String },
-    number: { type: String },
-    zipCode: { type: String }
+    country: { type: String, required: true, },
+    state: { type: String, required: true, },
+    city: {  type: String, required: true,},
+    neighboorhod: {  type: String, required: true, },
+    street: { type: String, required: true, },
+    number: {  type: String, required: true, },
+    zipCode: {  type: String, required: true, }
   },
 
   exams: [

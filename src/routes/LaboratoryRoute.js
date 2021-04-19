@@ -19,8 +19,11 @@ laboratoryRoute.delete('/laboratory', async (request, response, next) => {
      return await laboratoryController.delete(request, response, next);
 });
 
+laboratoryRoute.post('/laboratory/add-exam', async (request, response, next) => {
+     return await laboratoryController.addExam(request, response, next);
+});
 
-laboratoryRoute.post('/laboratory/addExam', async (request, response, next) => {
+laboratoryRoute.post('/laboratory/remove-exam', async (request, response, next) => {
      return await laboratoryController.addExam(request, response, next);
 });
 

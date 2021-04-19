@@ -1,22 +1,8 @@
 const mongoose = require('mongoose');
 const Laboratory  = mongoose.model('Laboratory');
 
-exports.save = async(data) => {   
-    
-    let array ;
-
-
-    if(!Array.isArray(data.laboratorys)){
-        array = [data]
-    }
-    else {
-        array = data.laboratorys
-    } 
-
-    console.log(array)
-
-    Laboratory.insertMany(array)
-   
+exports.save = async(param) => {   
+    Laboratory.insertMany(param)
 };
 
 exports.search = async() => {
@@ -24,13 +10,19 @@ exports.search = async() => {
     return res;
 }
 
-exports.update = async(data) => {
+exports.update = async(param) => {
 
-    await Laboratory.findByIdAndUpdate(data.id, {
-        $set: {
-            name : data.name,
-        }
+    param.forEach(element => {
+        Laboratory.findByIdAndUpdate(element._id, {
+            $set: {
+                name : element.name,
+                address : element.address
+            }
+        }, (err, res) => {
+            console.log(err, res)
+        });       
     });
+
 }
 
 exports.delete = async(param) => {
@@ -62,6 +54,15 @@ exports.addExam =  async(data) => {
         { new: true, useFindAndModify: false }
       );
 }
+
+exports.removeExam =  async(data) => {
+    await Laboratory.findByIdAndUpdate(
+        data.id,
+        { $pop: { exams: data.idExam } },
+        { new: true, useFindAndModify: false }
+      );
+}
+
 
 exports.searchLaboratory =  async(data) => {
     const res = await Laboratory.find({exams: { $in: [ data.id ] } });

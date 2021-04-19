@@ -12,7 +12,7 @@
 
 
 ---
-#### Laboratório
+#### Exame
 
 + Cadastrar um novo exame.
 + Obter uma lista de exames ativos.
@@ -34,4 +34,40 @@
 + __[Postam Docs](https://documenter.getpostman.com/view/10185972/TzJsfdQ4#cdf6b490-82a5-4752-92a9-52b552f086e3)__
 + __[Heroku](https://exames-laboratorio-api.herokuapp.com/)__
 
+---
+
+## Tecnologias
+
+- NodeJs 
+- Javascript 
+- Mongo
+- Heroku
+- Express
+
+ ---
+## Configurando ambiente de desenvolvimento
+
+    - Instalar dependências
+    	npm install
+    
+    - Rodar serviço localmente
+    	npm run dev
+ 
+    - Rodar serviço em produção
+    	npm start
+
+    - Criar arquivo .env, seguir exemplo arquivo example_env
+
+
+## Estrutura
+ 
+- src/routes/ -> Rotas da aplicação.
+
+- src/controllers -> Camada responsável por intermedirar as requisições.
+
+- src/model -> Definição do modelo do objeto utlizado no négocio.
+
+- src/repositories -> Camada responsável pela interação com o banco de dados.
+
+- src/validators -> Métodos auxilirares para validação de dados.
 
