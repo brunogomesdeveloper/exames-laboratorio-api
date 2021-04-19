@@ -24,7 +24,7 @@ laboratoryRoute.post('/laboratory/add-exam', async (request, response, next) => 
 });
 
 laboratoryRoute.post('/laboratory/remove-exam', async (request, response, next) => {
-     return await laboratoryController.addExam(request, response, next);
+     return await laboratoryController.addRemove(request, response, next);
 });
 
 laboratoryRoute.get('/laboratory/exam', async (request, response, next) => {

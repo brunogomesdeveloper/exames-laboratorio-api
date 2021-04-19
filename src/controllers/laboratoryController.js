@@ -121,7 +121,7 @@ exports.addExam = async(req, res, next) => {
     }
 };
 
-exports.addExam = async(req, res, next) => {
+exports.addRemove = async(req, res, next) => {
     try {
         await repository.removeExam({id : req.body.id, idExam : req.body.idExam })
         res.status(200).send({ message : "sucess - ok" });    

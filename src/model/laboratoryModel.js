@@ -27,7 +27,7 @@ const schema = new Schema({
     {
       type: mongoose.Schema.Types.ObjectId,
       ref: "Exam",
-
+      translator: String
     }
   ]
 

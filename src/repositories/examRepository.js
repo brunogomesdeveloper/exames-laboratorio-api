@@ -19,7 +19,7 @@ exports.update = async(param) => {
                 tipo : element.tipo
             }
         }, (err, res) => {
-            console.log(err, res)
+            //console.log(err, res)
         });       
     });
 
