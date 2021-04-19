@@ -2,15 +2,8 @@ const mongoose = require('mongoose');
 const examRoute = require('../routes/ExamRoute');
 const Exam  = mongoose.model('Exam');
 
-exports.save = async(data) => { 
-
-    if(Array.isArray(data.Exams)){
-        Exam.insertMany(data.Exams)
-    }
-    else{
-        let exam = new Exam(data);
-        await exam.save();    
-    }
+exports.save = async(param) => { 
+    Exam.insertMany(param)
 };
 
 exports.search = async() => {
@@ -19,12 +12,16 @@ exports.search = async() => {
 }
 
 exports.update = async(data) => {
-    await Exam.findByIdAndUpdate(data.id, {
-        $set: {
-            name : data.name,
-            tipo : data.tipo
-        }
+
+    param.forEach(element => {
+        Exam.findByIdAndUpdate(element._id, {
+            $set: {
+                name : data.name,
+                tipo : data.tipo
+            }
+        });       
     });
+
 }
 
 exports.delete = async(param) => { 
