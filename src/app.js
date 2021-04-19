@@ -17,8 +17,8 @@ mongoose.set('useCreateIndex', true);
 const Laboratory = require('./model/laboratoryModel');
 const Exam = require('./model/examModel');
 
-const  laboratoryRoute = require('./routes/laboratoryRoute')
-const  examRoute = require('./routes/examRoute')
+const  laboratoryRoute = require('./routes/LaboratoryRoute')
+const  examRoute = require('./routes/ExamRoute')
 
 
 app.use('/', laboratoryRoute);

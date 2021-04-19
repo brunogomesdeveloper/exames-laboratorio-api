@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const examRoute = require('../routes/examRoute');
+const examRoute = require('../routes/ExamRoute');
 const Exam  = mongoose.model('Exam');
 
 exports.save = async(data) => { 
